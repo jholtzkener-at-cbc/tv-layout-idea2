@@ -1,28 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13122.16" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="17506" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JrW-sq-2wv">
+    <device id="appleTV" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Item-->
+        <scene sceneID="5hH-gO-fK7">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc" id="puY-wd-5dZ" customClass="ViewController" customModule="tvTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="jXu-2k-RZo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tbw-9g-Yoy"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="SeS-k7-HS7">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="ZZt-Fg-C8h">
+                                <rect key="frame" x="-650" y="0.0" width="640" height="1080"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="640" id="WHA-1j-Gaj"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="eY3-xW-KEr">
+                                        <rect key="frame" x="80" y="66" width="560" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eY3-xW-KEr" id="M4m-gV-gNK">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4OL-Qo-DS4">
+                                <rect key="frame" x="192" y="162" width="1536" height="756"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eDF-ET-Zbw"/>
+                        <constraints>
+                            <constraint firstItem="ZZt-Fg-C8h" firstAttribute="top" secondItem="SeS-k7-HS7" secondAttribute="top" id="1nf-o1-VNh"/>
+                            <constraint firstItem="4OL-Qo-DS4" firstAttribute="height" secondItem="SeS-k7-HS7" secondAttribute="height" multiplier="0.7" id="4Lu-fG-zCw"/>
+                            <constraint firstItem="4OL-Qo-DS4" firstAttribute="width" secondItem="SeS-k7-HS7" secondAttribute="width" multiplier="0.8" id="67I-SH-l73"/>
+                            <constraint firstItem="ZZt-Fg-C8h" firstAttribute="leading" secondItem="SeS-k7-HS7" secondAttribute="leading" constant="-650" id="M1s-eI-z4f"/>
+                            <constraint firstAttribute="bottom" secondItem="ZZt-Fg-C8h" secondAttribute="bottom" id="caF-oE-2SQ"/>
+                            <constraint firstItem="4OL-Qo-DS4" firstAttribute="centerY" secondItem="SeS-k7-HS7" secondAttribute="centerY" id="fbM-X1-lRK"/>
+                            <constraint firstItem="4OL-Qo-DS4" firstAttribute="centerX" secondItem="SeS-k7-HS7" secondAttribute="centerX" id="lUs-Oi-LPJ"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="fIU-2y-2Ry"/>
+                    <connections>
+                        <outlet property="bigButton" destination="4OL-Qo-DS4" id="KMY-X9-2nz"/>
+                        <outlet property="tableView" destination="ZZt-Fg-C8h" id="GI8-94-JnK"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpb-5n-w7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="4634" y="-34"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="d1e-gi-k8y">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JrW-sq-2wv" customClass="TabBarController" customModule="TV_Layout_Idea" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gBy-iY-qtT">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="puY-wd-5dZ" kind="relationship" relationship="viewControllers" id="qEA-r7-KZi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DnI-3y-kFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2502" y="-34"/>
         </scene>
     </scenes>
 </document>
