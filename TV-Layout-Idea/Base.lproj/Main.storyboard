@@ -10,7 +10,7 @@
         <!--Item-->
         <scene sceneID="5hH-gO-fK7">
             <objects>
-                <viewController storyboardIdentifier="vc" id="puY-wd-5dZ" customClass="ViewController" customModule="tvTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc" id="puY-wd-5dZ" customClass="ViewController" customModule="TV_Layout_Idea" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jXu-2k-RZo"/>
                         <viewControllerLayoutGuide type="bottom" id="Tbw-9g-Yoy"/>
@@ -39,6 +39,9 @@
                                 <rect key="frame" x="192" y="162" width="1536" height="756"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pressedButton:" destination="puY-wd-5dZ" eventType="primaryActionTriggered" id="92X-Rw-qPM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eDF-ET-Zbw"/>
@@ -68,6 +71,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JrW-sq-2wv" customClass="TabBarController" customModule="TV_Layout_Idea" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gBy-iY-qtT">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

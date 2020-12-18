@@ -10,6 +10,13 @@ import UIKit
 enum Station: String {
     case r1 = "Radio One"
     case cbcmusic = "CBC Music"
+    
+    var url: URL {
+        switch self {
+        case .cbcmusic:  return URL(string: "https://cbcliveradio2-lh.akamaihd.net/i/CBCR2_TOR@382863/master.m3u8")!
+        case .r1: return URL(string: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_TOR@118420/master.m3u8")!
+        }
+    }
 }
 
 class ViewController:  UIViewController {
@@ -18,6 +25,8 @@ class ViewController:  UIViewController {
     var swipeRight: UISwipeGestureRecognizer!
     var swipeLeft: UISwipeGestureRecognizer!
     var station: Station!
+    var isPlaying: Bool = false
+    var player = AudioPlayer()
     
     @IBOutlet weak var bigButton: UIButton!
     override func viewDidLoad() {
@@ -64,6 +73,24 @@ class ViewController:  UIViewController {
                         }
                        })
     }
+    @IBAction func pressedButton(_ sender: Any) {
+        if isPlaying {
+            stopPlayback()
+        } else {
+            startPlayback()
+        }
+    }
+    
+    func stopPlayback() {
+        player.pause()
+        isPlaying = false
+    }
+    
+    func startPlayback() {
+        player.setPlayerItem(url: station.url)
+        player.play()
+        isPlaying  = true
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -89,3 +116,5 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         hideTable()
     }
 }
+
+

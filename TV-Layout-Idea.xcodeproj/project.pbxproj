@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B42CF65258D0C78006B83A5 /* CopiedAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B42CF64258D0C78006B83A5 /* CopiedAudioPlayer.swift */; };
 		5B94DABD258BA0E200DDB663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94DABC258BA0E200DDB663 /* AppDelegate.swift */; };
 		5B94DABF258BA0E200DDB663 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94DABE258BA0E200DDB663 /* ViewController.swift */; };
 		5B94DAC2258BA0E200DDB663 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B94DAC0258BA0E200DDB663 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B42CF64258D0C78006B83A5 /* CopiedAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopiedAudioPlayer.swift; sourceTree = "<group>"; };
 		5B94DAB9258BA0E200DDB663 /* TV-Layout-Idea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TV-Layout-Idea.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B94DABC258BA0E200DDB663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B94DABE258BA0E200DDB663 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				5B94DABE258BA0E200DDB663 /* ViewController.swift */,
 				5B94DACF258BA14900DDB663 /* TabBarController.swift */,
 				5B94DAC0258BA0E200DDB663 /* Main.storyboard */,
+				5B42CF64258D0C78006B83A5 /* CopiedAudioPlayer.swift */,
 				5B94DAC3258BA0E500DDB663 /* Assets.xcassets */,
 				5B94DAC5258BA0E500DDB663 /* LaunchScreen.storyboard */,
 				5B94DAC8258BA0E500DDB663 /* Info.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B94DAD0258BA14900DDB663 /* TabBarController.swift in Sources */,
+				5B42CF65258D0C78006B83A5 /* CopiedAudioPlayer.swift in Sources */,
 				5B94DABF258BA0E200DDB663 /* ViewController.swift in Sources */,
 				5B94DABD258BA0E200DDB663 /* AppDelegate.swift in Sources */,
 			);
